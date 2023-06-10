@@ -1,6 +1,5 @@
 package Servicio;
 
-import java.util.Date;
 
 public class Consulta extends Servicio{
     String tratamiento;

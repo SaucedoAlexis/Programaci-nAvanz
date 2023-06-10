@@ -1,6 +1,5 @@
 package Servicio;
 
-import java.util.Date;
 
 public class Castrar extends Servicio {
     String metodo;
