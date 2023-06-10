@@ -1,5 +1,8 @@
+import Producto.Producto;
 import Servicio.Castrar;
 import Servicio.Consulta;
+import Producto.Balanceado;
+import Producto.Medicamento;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,5 +14,21 @@ public class Main {
         service.mostrarServicio();
         Consulta service_2 = new Consulta(1000,"Vomitos luego de ingerir balanceado","Protector estomacal y cambio de balanceado");
         service_2.mostrarServicio();
+
+       //Producto producto = new Producto
+//               ("Apetitus","Perro",
+//               "Hueso Anudado",55478,
+//               "El Hueso Anudado de Apetitus es un " +
+//               "snack para perros de larga duración. " +
+//               "Es un producto 100% natural de calidad muy sabroso" +
+//               " y apetecible que a tu perro le encantará mordisquear.",
+//               1155.51f,1);
+       //producto.mostrarProducto();
+
+//       Medicamento medicamento = new Medicamento("Gato",3354,"Caja de pastillas antiparasitarias de 20 comprimidos",6648,1,"Curapets","20mg","pastillas");
+//       medicamento.mostrarProducto();
+
+        Balanceado balanceado = new Balanceado("CatChow",8,123451,"Alimento balanceado sabor pescado",7000,1,"Gato");
+        balanceado.mostrarProducto();
     }
 }
