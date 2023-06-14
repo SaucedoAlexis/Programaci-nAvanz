@@ -5,10 +5,9 @@ import java.time.format.DateTimeFormatter;
 
 
 public class Servicio {
-    String nombreServicio;
-    double precio;
-    String fecha;
-    String reporte;
+    private String nombreServicio;
+    private double precio;
+    private String reporte;
 
     public String getNombreServicio() {
         return nombreServicio;
@@ -26,13 +25,9 @@ public class Servicio {
         this.precio = precio;
     }
 
-    public String getFecha() {
-        return fecha;
-    }
 
-    public void setFecha(String fecha) {
-        this.fecha = fecha;
-    }
+
+
 
     public String getReporte() {
         return reporte;
@@ -45,10 +40,7 @@ public class Servicio {
         this.nombreServicio = nombreServicio;
         this.precio = precio;
         this.reporte = reporte;
-        // Formateo de horario
-        LocalDateTime fechaSinFormato = LocalDateTime.now();
-        DateTimeFormatter formateoDeFecha = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-        this.fecha = formateoDeFecha.format(fechaSinFormato);
+
 
 
     }
@@ -57,8 +49,7 @@ public class Servicio {
                "\n-----------Detalles del servicio contratado--------" +
                 "\nNombre Del Servicio: " + this.nombreServicio +
                 "\nPrecio: " + this.precio +
-                "\nReporte: " + this.reporte +
-                "\nfecha: " + this.fecha);
+                "\nReporte: " + this.reporte);
     }
 
 
