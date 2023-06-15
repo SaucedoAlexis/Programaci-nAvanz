@@ -81,4 +81,41 @@ public class Venta {
             producto.mostrarProducto();
         }
     }
+
+    public void agregarServicio(Servicio servicio){
+        this.listaServicios.add(servicio);
+    }
+
+    public void mostrarServicios(){
+        ArrayList<Servicio> servicios = this.listaServicios;
+        for ( Servicio servicio : servicios){
+            servicio.mostrarServicio();
+        }
+    }
+
+    public void calcularTotal() {
+        //Total de los servicios
+        double totalServicio = 0;
+        if (listaServicios.size() > 0) {
+            for (Servicio servicio : listaServicios) {
+                totalServicio += servicio.getPrecio();
+            }
+        }
+        //Total de los productos
+        double totalProducto = 0;
+        if (listaProductos.size() > 0) {
+            for (Producto producto : listaProductos) {
+                totalProducto += producto.getPrecioProducto();
+            }
+        }
+        this.totalVendido = totalServicio + totalProducto;
+
+
+    }
+
+
+
+
+
+
 }
