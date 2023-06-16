@@ -19,7 +19,7 @@ public class Main {
                "snack para perros de larga duración. " +
                "Es un producto 100% natural de calidad muy sabroso" +
                " y apetecible que a tu perro le encantará mordisquear.",
-               1155.51f,1);
+               1155.51f,2);
 //       producto.mostrarProducto();
 //
        Medicamento medicamento = new Medicamento("Gato",3354,"Caja de pastillas antiparasitarias de 20 comprimidos",6648,1,"Curapets","20mg","pastillas");
@@ -33,11 +33,14 @@ public class Main {
         venta.mostrarProductos();
 //        venta.getCliente().mostrarCliente();
 
-//        venta.agregarServicio(service);
-//        venta.agregarServicio(service2);
+        venta.agregarServicio(service);
+        venta.agregarServicio(service2);
 //        venta.mostrarServicios();
         venta.calcularTotal();
         System.out.println(venta.getTotalVendido());
+        Ticket ticket = venta.emitirTicket(venta);
+        ticket.mostrarTicker();
+        ticket.imprimirTicket();
 
     }
 }

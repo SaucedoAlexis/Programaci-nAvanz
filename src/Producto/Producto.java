@@ -81,7 +81,7 @@ public class Producto {
                         "\nTipo de Producto: " + this.tipoProducto +
                         "\nCodigo Del Producto: " + this.codigoProducto +
                         "\nDescripción: " + this.descripcion +
-                        "\nPrecio: " + this.precioProducto +
+                        "\nPrecio unitario: " + this.precioProducto +
                         "\nCantidad: " + this.cantidadProducto +
                         "\nAnimal: " + this.animal +
                         "\nMarca: " + this.marca);

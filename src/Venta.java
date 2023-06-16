@@ -61,7 +61,7 @@ public class Venta {
         this.cliente = cliente;
     }
 
-    public Venta(Vendedor vendedor,Cliente cliente){
+    public Venta(Vendedor vendedor, Cliente cliente) {
         this.vendedor = vendedor;
         this.cliente = cliente;
         // Formateo de horario
@@ -71,24 +71,24 @@ public class Venta {
         this.fechaYHora = formateoDeFecha.format(fechaSinFormato);
     }
 
-    public void agregarProducto(Producto producto){
+    public void agregarProducto(Producto producto) {
         this.listaProductos.add(producto);
     }
 
-    public void mostrarProductos(){
+    public void mostrarProductos() {
         ArrayList<Producto> productos = this.listaProductos;
-        for ( Producto producto : productos){
+        for (Producto producto : productos) {
             producto.mostrarProducto();
         }
     }
 
-    public void agregarServicio(Servicio servicio){
+    public void agregarServicio(Servicio servicio) {
         this.listaServicios.add(servicio);
     }
 
-    public void mostrarServicios(){
+    public void mostrarServicios() {
         ArrayList<Servicio> servicios = this.listaServicios;
-        for ( Servicio servicio : servicios){
+        for (Servicio servicio : servicios) {
             servicio.mostrarServicio();
         }
     }
@@ -105,17 +105,27 @@ public class Venta {
         double totalProducto = 0;
         if (listaProductos.size() > 0) {
             for (Producto producto : listaProductos) {
-                totalProducto += producto.getPrecioProducto();
+                totalProducto += producto.getPrecioProducto() * producto.getCantidadProducto();
             }
         }
         this.totalVendido = totalServicio + totalProducto;
-
-
     }
 
-
-
-
-
-
+    public Ticket emitirTicket(Venta venta){
+        this.calcularTotal();
+        return new Ticket(this);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
