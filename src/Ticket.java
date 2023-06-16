@@ -77,24 +77,33 @@ public class Ticket {
                         "\nVendedor: " + this.getNombreVendedor() +
                         "\nFecha y Horario: " + this.getHorario()
         );
-        System.out.println("------------Productos Adquiridos------------");
-        for (Producto producto : this.getProductosVendidos()){
-            System.out.println(
-                    producto.getCodigoProducto() + " " +
-                    producto.getTipoProducto() + " " +
-                    producto.getCantidadProducto()+ "        " +
-                    producto.getPrecioProducto() * producto.getCantidadProducto()+"$");
+        if (this.getProductosVendidos().size() > 0) {
+            System.out.println("------------Productos Adquiridos------------");
+            for (Producto producto : this.getProductosVendidos()) {
+                System.out.println(
+                        producto.getCodigoProducto() + " " +
+                                producto.getTipoProducto() + " " +
+                                producto.getCantidadProducto() + "        " +
+                                producto.getPrecioProducto() * producto.getCantidadProducto() + "$");
+            }
         }
-        System.out.println("------------Servicios Contratados------------");
-        for (Servicio servicio : this.getServiciosVendidos()){
-            System.out.println(
-                    servicio.getNombreServicio() + "        " +
-                            servicio.getPrecio() + "$");
+        else if(this.getServiciosVendidos().size() > 0) {
+            System.out.println("------------Servicios Contratados------------");
+            for (Servicio servicio : this.getServiciosVendidos()) {
+                System.out.println(
+                        servicio.getNombreServicio() + "        " +
+                                servicio.getPrecio() + "$");
+            }
         }
         String[] total = this.getPrecioTotal().split("\\.");
-        System.out.println("--------Resumen---------"+
-                "\nTotal de la venta: " + total[0] + "." +total[1].substring(0,2)+"$");
-
+        try {
+            System.out.println("--------Resumen---------" +
+                    "\nTotal de la venta: " + total[0] + "." + total[1].substring(0, 2) + "$");
+        }
+        catch (Exception e){
+            System.out.println("--------Resumen---------" +
+                    "\nTotal de la venta: " + total[0] + "." + total[1] + "$");
+        }
     }
     public void imprimirTicket(){
         System.out.println("¡Se ha impreso el ticket!");

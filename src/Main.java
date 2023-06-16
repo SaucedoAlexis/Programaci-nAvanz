@@ -28,8 +28,8 @@ public class Main {
 //        Balanceado balanceado = new Balanceado("CatChow",8,123451,"Alimento balanceado sabor pescado",7000,1,"Gato");
 //        balanceado.mostrarProducto();
         Venta venta = new Venta(nuevoVendedor,clienteRegistrado);
-        venta.agregarProducto(producto);
-        venta.agregarProducto(medicamento);
+//        venta.agregarProducto(producto);
+//        venta.agregarProducto(medicamento);
         venta.mostrarProductos();
 //        venta.getCliente().mostrarCliente();
 
