@@ -1,5 +1,5 @@
 public class Vendedor {
-    String nombre;
+    private String nombre;
 
     public Vendedor(String nombre) {
         this.nombre = nombre;
@@ -13,9 +13,11 @@ public class Vendedor {
         this.nombre = nombre;
     }
 
-//    public void realizarVenta(){
-//        Venta nuevaVenta = new Venta(this.nombre);
-//    }
+    public Venta realizarVenta(Cliente cliente){
+        Venta nuevaVenta = new Venta(this,cliente);
+        return nuevaVenta;
+
+    }
 
     public Cliente registrarCliente(int dni, String nombre, String apellido, int telefono, int celular, String direccion, String mail){
         Cliente nuevoCliente = new Cliente(dni,nombre,apellido,telefono,celular,direccion,mail);

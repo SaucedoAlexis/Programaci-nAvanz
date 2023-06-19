@@ -1,13 +1,13 @@
 package Producto;
 
 public class Producto {
-    String tipoProducto;
-    int codigoProducto;
-    String descripcion;
-    float precioProducto;
-    int cantidadProducto;
-    String animal;
-    String marca;
+    private String tipoProducto;
+    private int codigoProducto;
+    private String descripcion;
+    private float precioProducto;
+    private int cantidadProducto;
+    private String animal;
+    private String marca;
 
     public Producto(String marca, String animal, String tipoProducto, int codigoProducto, String descripcion, float precioProducto, int cantidadProducto) {
         this.tipoProducto = tipoProducto;
@@ -81,7 +81,7 @@ public class Producto {
                         "\nTipo de Producto: " + this.tipoProducto +
                         "\nCodigo Del Producto: " + this.codigoProducto +
                         "\nDescripción: " + this.descripcion +
-                        "\nPrecio unitario: " + this.precioProducto +
+                        "\nPrecio unitario: " + this.precioProducto +"$"+
                         "\nCantidad: " + this.cantidadProducto +
                         "\nAnimal: " + this.animal +
                         "\nMarca: " + this.marca);

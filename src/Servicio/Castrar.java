@@ -2,7 +2,7 @@ package Servicio;
 
 
 public class Castrar extends Servicio {
-    String metodo;
+    private String metodo;
 
     public String getMetodo() {
         return metodo;

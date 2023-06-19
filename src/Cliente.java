@@ -1,11 +1,11 @@
 public class Cliente {
-    int dni;
-    String nombre;
-    String apellido;
-    int telefono;
-    int celular;
-    String direccion;
-    String mail;
+    private int dni;
+    private String nombre;
+    private String apellido;
+    private int telefono;
+    private int celular;
+    private String direccion;
+    private String mail;
 
     public Cliente(int dni, String nombre, String apellido, int telefono, int celular, String direccion, String mail) {
         this.dni = dni;

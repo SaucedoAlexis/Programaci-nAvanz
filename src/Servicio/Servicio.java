@@ -48,7 +48,7 @@ public class Servicio {
         System.out.print(
                "\n-----------Detalles del servicio contratado--------" +
                 "\nNombre Del Servicio: " + this.nombreServicio +
-                "\nPrecio: " + this.precio +
+                "\nPrecio: " + this.precio +"$"+
                 "\nReporte: " + this.reporte);
     }
 

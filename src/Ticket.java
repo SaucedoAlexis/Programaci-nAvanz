@@ -14,8 +14,8 @@ public class Ticket {
 
 
     public Ticket(Venta venta){
-        this.nombreCliente = venta.getCliente().nombre;
-        this.nombreVendedor = venta.getVendedor().nombre;
+        this.nombreCliente = venta.getCliente().getNombre();
+        this.nombreVendedor = venta.getVendedor().getNombre();
         this.productosVendidos = venta.getProductos();
         this.serviciosVendidos = venta.getServicios();
         this.precioTotal = String.valueOf(venta.getTotalVendido());
@@ -70,7 +70,7 @@ public class Ticket {
         this.precioTotal = precioTotal;
     }
 
-    public void mostrarTicker(){
+    public void mostrarTicket(){
         System.out.println(
                 "------------Datos del ticket------------" +
                 "\nCliente: " + this.getNombreCliente() +
@@ -87,7 +87,7 @@ public class Ticket {
                                 producto.getPrecioProducto() * producto.getCantidadProducto() + "$");
             }
         }
-        else if(this.getServiciosVendidos().size() > 0) {
+        if(this.getServiciosVendidos().size() > 0) {
             System.out.println("------------Servicios Contratados------------");
             for (Servicio servicio : this.getServiciosVendidos()) {
                 System.out.println(

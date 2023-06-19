@@ -1,8 +1,8 @@
 package Producto;
 
 public class Medicamento extends Producto{
-    String dosis;
-    String presentacion;
+    private String dosis;
+    private String presentacion;
 
     public Medicamento(String animal,int codigoProducto,String descripción, float precioProducto, int cantidadProducto, String marca ,String dosis, String presentacion) {
         super(marca,animal,"Medicamento",45441,descripción,precioProducto,cantidadProducto);

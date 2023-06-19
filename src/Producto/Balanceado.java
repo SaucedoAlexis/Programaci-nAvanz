@@ -1,7 +1,7 @@
 package Producto;
 
 public class Balanceado extends Producto{
-    int peso;
+    private int peso;
 
 
 

@@ -2,7 +2,7 @@ package Servicio;
 
 
 public class Consulta extends Servicio{
-    String tratamiento;
+    private String tratamiento;
 
     public String getTratamiento() {
         return tratamiento;
