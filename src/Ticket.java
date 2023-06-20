@@ -78,30 +78,30 @@ public class Ticket {
                         "\nFecha y Horario: " + this.getHorario()
         );
         if (this.getProductosVendidos().size() > 0) {
-            System.out.println("------------Productos Adquiridos------------");
+            System.out.println("------------------Productos Adquiridos-----------------");
+            System.out.println(String.format("%-10s %-20s %-10s %10s", "Codigo", "Tipo producto", "Cantidad", "Total"));
             for (Producto producto : this.getProductosVendidos()) {
-                System.out.println(
-                        producto.getCodigoProducto() + " " +
-                                producto.getTipoProducto() + " " +
-                                producto.getCantidadProducto() + "        " +
-                                producto.getPrecioProducto() * producto.getCantidadProducto() + "$");
+                System.out.println(String.format("%-10s %-20s %5s %15s %1s", producto.getCodigoProducto(), producto.getTipoProducto()
+                        ,producto.getCantidadProducto(), producto.getPrecioProducto() * producto.getCantidadProducto(), "$"));
             }
+
         }
         if(this.getServiciosVendidos().size() > 0) {
-            System.out.println("------------Servicios Contratados------------");
+            System.out.println("-----------------Servicios Contratados-----------------");
+            System.out.println(String.format("%-10s %10s", "Servicio", "Precio"));
             for (Servicio servicio : this.getServiciosVendidos()) {
-                System.out.println(
-                        servicio.getNombreServicio() + "        " +
-                                servicio.getPrecio() + "$");
+                System.out.println(String.format("%-10s %10s %1s",
+                                servicio.getNombreServicio(),
+                                servicio.getPrecio() , "$"));
             }
         }
         String[] total = this.getPrecioTotal().split("\\.");
         try {
-            System.out.println("--------Resumen---------" +
+            System.out.println("----------Resumen-----------" +
                     "\nTotal de la venta: " + total[0] + "." + total[1].substring(0, 2) + "$");
         }
         catch (Exception e){
-            System.out.println("--------Resumen---------" +
+            System.out.println("----------Resumen-----------" +
                     "\nTotal de la venta: " + total[0] + "." + total[1] + "$");
         }
     }
